@@ -3,6 +3,11 @@ app = "tigris-registry"
 [build]
 image = "registry:2"
 
+[mounts]
+source = "htpasswd"
+destination = "/data"
+initial_size = 1
+
 [[services]]
 protocol = "tcp"
 internal_port = 5000
